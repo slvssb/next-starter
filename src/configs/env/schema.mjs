@@ -7,6 +7,8 @@ import { z } from 'zod'
  */
 export const serverSchema = z.object({
   NODE_ENV: z.enum(['development', 'production']),
+  // FIXME: remove .optional()
+  DATABASE_URL: z.string().url().startsWith('postgresql').optional(),
 })
 
 /**
@@ -16,6 +18,7 @@ export const serverSchema = z.object({
  */
 export const serverEnv = {
   NODE_ENV: process.env.NODE_ENV,
+  DATABASE_URL: process.env.DATABASE_URL,
 }
 
 /**
