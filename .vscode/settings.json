@@ -1,4 +1,8 @@
 {
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
   "javascript.format.semicolons": "remove",
   "javascript.preferences.quoteStyle": "single",
   "typescript.format.semicolons": "remove",
